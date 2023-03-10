@@ -129,6 +129,15 @@ response_t *receive_packets(int socketfd, int ttl) {
 
             process_packet(&addr, &time, ttl);
         }
+
+        bool done = true;
+        for (int i = 0; i < NUM_PACKETS; i++) {
+            done &= response[i].status != PACKET_NOT_RECEIVED;
+        }
+
+        if (done) {
+            break;
+        }
     }
 
     return response;
