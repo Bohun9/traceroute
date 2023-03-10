@@ -23,16 +23,16 @@ static response_t response[NUM_PACKETS];
 
 #ifdef DEBUG
 static char *string_status(int s) {
-	if (s == PACKET_RECEIVED) {
-		return "PACKET RECEIVED";
-	}
-	if (s == PACKET_NOT_RECEIVED) {
-		return "PACKET NOT RECEIVED";
-	}
-	if (s == PACKET_TIME_EXCEEDED) {
-		return "PACKET TIME EXCEEDED";
-	}
-	assert(false);
+   if (s == PACKET_RECEIVED) {
+        return "PACKET RECEIVED";
+    }
+    if (s == PACKET_NOT_RECEIVED) {
+        return "PACKET NOT RECEIVED";
+    }
+    if (s == PACKET_TIME_EXCEEDED) {
+        return "PACKET TIME EXCEEDED";
+    }
+    assert(false);
 }
 #endif
 
