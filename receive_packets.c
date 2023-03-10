@@ -23,7 +23,7 @@ static response_t response[NUM_PACKETS];
 
 #ifdef DEBUG
 static char *string_status(int s) {
-   if (s == PACKET_RECEIVED) {
+    if (s == PACKET_RECEIVED) {
         return "PACKET RECEIVED";
     }
     if (s == PACKET_NOT_RECEIVED) {
